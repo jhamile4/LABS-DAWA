@@ -1,0 +1,46 @@
+
+> pc3-techsolutions@0.1.0 dev
+> next dev
+
+▲ Next.js 16.2.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://172.25.80.1:3000
+✓ Ready in 15.4s
+Creating turbopack project {
+  dir: 'C:\\Users\\ASUSVivobook\\Documents\\LABS-DAWA\\sem12\\pc3',
+  testMode: true
+}
+
+ GET /api/courses 200 in 2.2s (next.js: 2.2s, application-code: 36ms)
+ POST /api/courses 201 in 3.6s (next.js: 3.5s, application-code: 22ms)
+○ Compiling /courses ...
+ GET /dashboard 200 in 14.4s (next.js: 14.1s, application-code: 297ms)
+ GET /courses 200 in 14.6s (next.js: 14.5s, application-code: 120ms)
+ GET /courses 200 in 318ms (next.js: 69ms, application-code: 249ms)
+ GET /dashboard 200 in 81ms (next.js: 18ms, application-code: 63ms)
+ GET /api/courses 200 in 95ms (next.js: 35ms, application-code: 60ms)
+⨯ SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at async POST (app\api\courses\route.ts:15:16)
+  13 |
+  14 | export async function POST(request: Request) {
+> 15 |   const body = await request.json();
+     |                ^
+  16 |
+  17 |   if (!body.nombre || !body.categoria || !body.duracion) {
+  18 |     return NextResponse.json(
+ POST /api/courses 500 in 243ms (next.js: 10ms, application-code: 233ms)
+⨯ SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at async POST (app\api\courses\route.ts:15:16)
+  13 |
+  14 | export async function POST(request: Request) {
+> 15 |   const body = await request.json();
+     |                ^
+  16 |
+  17 |   if (!body.nombre || !body.categoria || !body.duracion) {
+  18 |     return NextResponse.json(
+ POST /api/courses 500 in 69ms (next.js: 11ms, application-code: 58ms)
+ POST /api/courses 201 in 25ms (next.js: 18ms, application-code: 6ms)
+ GET /api/courses 200 in 66ms (next.js: 28ms, application-code: 38ms)
+ GET /courses 200 in 159ms (next.js: 29ms, application-code: 129ms)
