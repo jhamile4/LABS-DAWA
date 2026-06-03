@@ -1,0 +1,84 @@
+/* [project]/src/components/ui/Button.module.css [app-client] (css) */
+.Button-module__8RiFmG__button {
+  transition: all .3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.Button-module__8RiFmG__button:before {
+  content: "";
+  background: #ffffff80;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  transition: width .6s, height .6s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.Button-module__8RiFmG__button:active:before {
+  width: 300px;
+  height: 300px;
+}
+
+.Button-module__8RiFmG__primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 4px 15px #667eea66;
+}
+
+.Button-module__8RiFmG__primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px #667eea99;
+}
+
+.Button-module__8RiFmG__secondary {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  box-shadow: 0 4px 15px #f5576c66;
+}
+
+.Button-module__8RiFmG__secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px #f5576c99;
+}
+
+.Button-module__8RiFmG__outline {
+  color: #667eea;
+  background: none;
+  border: 2px solid #667eea;
+}
+
+.Button-module__8RiFmG__outline:hover {
+  color: #fff;
+  background: #667eea;
+}
+
+.Button-module__8RiFmG__loading {
+  pointer-events: none;
+  opacity: .6;
+}
+
+.Button-module__8RiFmG__spinner {
+  border: 2px solid #ffffff4d;
+  border-top-color: #fff;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  animation: .6s linear infinite Button-module__8RiFmG__spin;
+  display: inline-block;
+}
+
+@keyframes Button-module__8RiFmG__spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.Button-module__8RiFmG__disabled {
+  cursor: not-allowed;
+  opacity: .5;
+  pointer-events: none;
+}
+
+/*# sourceMappingURL=src_components_ui_Button_module_css_0w3-wzy._.single.css.map*/

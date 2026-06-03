@@ -1,0 +1,55 @@
+/* [project]/src/components/ui/Input.module.css [app-client] (css) */
+.Input-module__5jsJuW__field {
+  position: relative;
+}
+
+.Input-module__5jsJuW__input {
+  background: #fff;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  outline: none;
+  width: 100%;
+  padding: 18px 14px 10px;
+  transition: border .2s, box-shadow .2s;
+}
+
+.Input-module__5jsJuW__input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 4px #667eea26;
+}
+
+.Input-module__5jsJuW__label {
+  color: #6b7280;
+  pointer-events: none;
+  transition: all .2s;
+  position: absolute;
+  top: 14px;
+  left: 14px;
+}
+
+.Input-module__5jsJuW__input:focus + .Input-module__5jsJuW__label, .Input-module__5jsJuW__input:not(:placeholder-shown) + .Input-module__5jsJuW__label {
+  color: #667eea;
+  font-size: 11px;
+  top: 5px;
+}
+
+.Input-module__5jsJuW__error {
+  border-color: #ef4444;
+  animation: .28s linear Input-module__5jsJuW__shake;
+}
+
+@keyframes Input-module__5jsJuW__shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-4px);
+  }
+
+  75% {
+    transform: translateX(4px);
+  }
+}
+
+/*# sourceMappingURL=src_components_ui_Input_module_css_0w3-wzy._.single.css.map*/

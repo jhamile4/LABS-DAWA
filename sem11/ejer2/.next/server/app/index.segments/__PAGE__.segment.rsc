@@ -1,0 +1,6 @@
+1:"$Sreact.fragment"
+2:I[22016,["/_next/static/chunks/01xlw8hd842-c.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/0ka051yepewro.js"],""]
+3:I[97367,["/_next/static/chunks/01xlw8hd842-c.js","/_next/static/chunks/0d3shmwh5_nmn.js"],"OutletBoundary"]
+4:"$Sreact.suspense"
+0:{"rsc":["$","$1","c",{"children":[["$","main",null,{"className":"min-h-screen p-8","children":["$","section",null,{"className":"mx-auto max-w-4xl rounded-lg bg-white p-10 shadow","children":[["$","p",null,{"className":"text-sm font-bold uppercase tracking-[0.2em] text-slate-500","children":"Ejercicio 2"}],["$","h1",null,{"className":"mt-3 text-4xl font-black","children":"Dashboard de proyectos"}],["$","p",null,{"className":"mt-3 text-slate-600","children":"Componentes tipo shadcn/ui: Card, Button, Badge, Tabs, Avatar, Dialog, Select, Table y Checkbox."}],["$","$L2",null,{"className":"mt-8 inline-flex rounded-md bg-slate-950 px-5 py-3 font-semibold text-white","href":"/dashboard","children":"Abrir dashboard"}]]}]}],[["$","script","script-0",{"src":"/_next/static/chunks/0ka051yepewro.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"BaRHHkkt5HlKhBitxtEVj"}
+5:null

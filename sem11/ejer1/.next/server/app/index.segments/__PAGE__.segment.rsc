@@ -1,0 +1,6 @@
+1:"$Sreact.fragment"
+2:I[22016,["/_next/static/chunks/01xlw8hd842-c.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/0ka051yepewro.js"],""]
+3:I[97367,["/_next/static/chunks/01xlw8hd842-c.js","/_next/static/chunks/0d3shmwh5_nmn.js"],"OutletBoundary"]
+4:"$Sreact.suspense"
+0:{"rsc":["$","$1","c",{"children":[["$","main",null,{"className":"min-h-screen px-6 py-16","children":["$","section",null,{"className":"mx-auto max-w-4xl rounded-2xl bg-white p-10 shadow-lg","children":[["$","p",null,{"className":"text-sm font-bold uppercase tracking-[0.2em] text-indigo-600","children":"Ejercicio 1"}],["$","h1",null,{"className":"mt-4 text-4xl font-black","children":"Componentes reutilizables"}],["$","p",null,{"className":"mt-3 text-gray-600","children":"Demostracion de CSS Modules para animaciones complejas y Tailwind CSS para layout, colores y responsive."}],["$","$L2",null,{"href":"/styling","className":"mt-8 inline-flex rounded-lg bg-indigo-600 px-5 py-3 font-semibold text-white","children":"Abrir /styling"}]]}]}],[["$","script","script-0",{"src":"/_next/static/chunks/0ka051yepewro.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"ZCdkQxETPQ_-xFmMUVfVu"}
+5:null
