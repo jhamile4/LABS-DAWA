@@ -47,3 +47,6 @@ Creating turbopack project {
  GET / 200 in 1386ms (next.js: 1308ms, application-code: 79ms)
  GET /courses 200 in 35ms (next.js: 4ms, application-code: 31ms)
  GET /dashboard 200 in 30ms (next.js: 7ms, application-code: 23ms)
+○ Compiling /_not-found/page ...
+ GET /styling 404 in 7.2s (next.js: 6.4s, application-code: 794ms)
+ GET /styling 404 in 234ms (next.js: 33ms, application-code: 201ms)
