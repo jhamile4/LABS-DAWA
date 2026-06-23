@@ -2,10 +2,11 @@ import Link from "next/link";
 
 async function getProducts() {
 
-const res = await fetch(
+const res =
+await fetch(
 "http://localhost:3001/api/products",
 {
-cache: "no-store"
+cache:"no-store"
 }
 );
 
@@ -13,44 +14,69 @@ return res.json();
 
 }
 
-export default async function Home() {
+export default async function Home(){
 
 const products =
 await getProducts();
 
-return (
+return(
 
 <div className="p-10">
 
-<h1
-className="
-text-3xl
-mb-5
-"
->
+<h1 className="text-3xl mb-5">
 
-Productos
+Mini Marketplace
 
 </h1>
+
+<div className="mb-5">
+
+<a
+href="/"
+className="mr-3"
+>
+
+Todos
+
+</a>
+
+</div>
 
 {
 
 products.map(
 (product:any)=>(
 
-<Link
-href={`/products/${product.id}`}
-key={product.id}
->
-
 <div
+
+key={product.id}
+
 className="
 border
 p-5
 mb-5
-cursor-pointer
 "
+
 >
+
+<Link
+href={`/products/${product.id}`}
+>
+
+<img
+
+src={
+product.imageUrl
+||
+
+"https://picsum.photos/300"
+}
+
+width="250"
+
+alt="producto"
+
+/>
 
 <h2>
 
@@ -58,8 +84,11 @@ cursor-pointer
 
 </h2>
 
+</Link>
+
 <p>
 
+Precio:
 S/
 {product.precio}
 
@@ -71,9 +100,32 @@ S/
 
 </p>
 
-</div>
+<p>
 
-</Link>
+Categoría:
+{
+
+product.categoryId===1
+?
+
+"Tecnologia"
+
+:
+
+product.categoryId===2
+?
+
+"Accesorios"
+
+:
+
+"General"
+
+}
+
+</p>
+
+</div>
 
 )
 
