@@ -1,18 +1,41 @@
-const express = require("express");
+const router =
+require("express").Router();
 
-const router = express.Router();
+const auth =
+require("../middleware/auth");
 
-const controller =
-require("../controllers/product.controller");
+const {
 
-router.get("/", controller.getAll);
+getProducts,
+getProduct,
+createProduct
 
-router.get("/:id", controller.getById);
+} =
+require(
+"../controllers/product.controller"
+);
 
-router.post("/", controller.create);
+router.get(
+"/",
+getProducts
+);
 
-router.put("/:id", controller.update);
+router.get(
+"/:id",
+getProduct
+);
 
-router.delete("/:id", controller.remove);
+router.post(
 
-module.exports = router;
+"/",
+
+auth(
+["ADMIN"]
+),
+
+createProduct
+
+);
+
+module.exports =
+router;

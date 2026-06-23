@@ -1,51 +1,53 @@
-const Product = require("../models/Product");
+const Product =
+require(
+"../models/Product"
+);
 
-exports.getAll = async (req, res) => {
-  const products = await Product.findAll();
-  res.json(products);
+exports.getProducts =
+async(
+req,
+res
+)=>{
+
+const products =
+await Product.findAll();
+
+res.json(
+products
+);
+
 };
 
-exports.getById = async (req, res) => {
-  const product = await Product.findByPk(req.params.id);
+exports.getProduct =
+async(
+req,
+res
+)=>{
 
-  if (!product) {
-    return res.status(404).json({
-      mensaje: "No encontrado"
-    });
-  }
+const product =
+await Product.findByPk(
+req.params.id
+);
 
-  res.json(product);
+res.json(
+product
+);
+
 };
 
-exports.create = async (req, res) => {
-  const product = await Product.create(req.body);
+exports.createProduct =
+async(
+req,
+res
+)=>{
 
-  res.status(201).json(product);
-};
+const product =
+await Product.create(
+req.body
+);
 
-exports.update = async (req, res) => {
-  await Product.update(
-    req.body,
-    {
-      where: {
-        id: req.params.id
-      }
-    }
-  );
+res.json(
+product
+);
 
-  res.json({
-    mensaje: "Actualizado"
-  });
-};
-
-exports.remove = async (req, res) => {
-  await Product.destroy({
-    where: {
-      id: req.params.id
-    }
-  });
-
-  res.json({
-    mensaje: "Eliminado"
-  });
 };
