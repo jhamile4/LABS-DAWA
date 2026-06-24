@@ -9,28 +9,7 @@ require("./models/User");
 require("./models/Product");
 require("./models/Category");
 
-const PORT =
-process.env.PORT || 10000;
-
-// LEVANTAR SERVIDOR PRIMERO
-app.listen(
-
-PORT,
-
-()=>{
-
-console.log(
-`Servidor corriendo en ${PORT}`
-);
-
-connectDB();
-
-}
-
-);
-
-// CONECTAR BD DESPUES
-async function connectDB(){
+async function start(){
 
 try{
 
@@ -46,18 +25,33 @@ console.log(
 "Tablas listas"
 );
 
+const PORT =
+process.env.PORT
+||
+10000;
+
+app.listen(
+
+PORT,
+
+()=>{
+
+console.log(
+`Servidor corriendo en ${PORT}`
+);
+
+}
+
+);
+
 }
 
 catch(error){
 
-console.log(
-"Error BD:"
-);
-
-console.log(
-error
-);
+console.log(error);
 
 }
 
 }
+
+start();
