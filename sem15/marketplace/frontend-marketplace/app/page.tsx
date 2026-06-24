@@ -1,16 +1,22 @@
 import Link from "next/link";
 
-async function getProducts() {
+async function getProducts(){
 
 const res =
 await fetch(
-"http://localhost:3001/api/products",
+
+`${process.env.NEXT_PUBLIC_API_URL}/api/products`,
+
 {
 cache:"no-store"
 }
+
 );
 
-return res.json();
+const data =
+await res.json();
+
+return data;
 
 }
 
@@ -29,22 +35,10 @@ Mini Marketplace
 
 </h1>
 
-<div className="mb-5">
-
-<a
-href="/"
-className="mr-3"
->
-
-Todos
-
-</a>
-
-</div>
-
 {
 
 products.map(
+
 (product:any)=>(
 
 <div
@@ -60,7 +54,9 @@ mb-5
 >
 
 <Link
+
 href={`/products/${product.id}`}
+
 >
 
 <img
@@ -80,9 +76,7 @@ alt="producto"
 
 <h2>
 
-{product.nombre}
-
-</h2>
+{product.nombre}</h2>
 
 </Link>
 
@@ -102,10 +96,11 @@ S/
 
 <p>
 
-Categoría:
+Categoria:
 {
 
 product.categoryId===1
+
 ?
 
 "Tecnologia"
@@ -113,6 +108,7 @@ product.categoryId===1
 :
 
 product.categoryId===2
+
 ?
 
 "Accesorios"
