@@ -6,14 +6,8 @@ require("./app");
 const sequelize =
 require("./config/database");
 
-/*
-IMPORTAR MODELOS
-*/
-
 require("./models/Product");
-
 require("./models/Category");
-
 require("./models/User");
 
 async function start(){
@@ -26,22 +20,27 @@ console.log(
 "MYSQL conectado"
 );
 
-await sequelize.sync({
-alter:true
-});
+await sequelize.sync();
 
 console.log(
 "Tablas listas"
 );
 
+const PORT =
+process.env.PORT
+||
+3001;
+
 app.listen(
 
-3001,
+PORT,
 
 ()=>{
 
 console.log(
-"http://localhost:3001"
+
+`Servidor activo ${PORT}`
+
 );
 
 }
