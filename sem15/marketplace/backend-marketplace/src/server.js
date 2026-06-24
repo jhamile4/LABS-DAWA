@@ -1,16 +1,36 @@
 require("dotenv").config();
 
-const app =
-require("./app");
+const app = require("./app");
 
 const sequelize =
 require("./config/database");
 
+require("./models/User");
 require("./models/Product");
 require("./models/Category");
-require("./models/User");
 
-async function start(){
+const PORT =
+process.env.PORT || 10000;
+
+// LEVANTAR SERVIDOR PRIMERO
+app.listen(
+
+PORT,
+
+()=>{
+
+console.log(
+`Servidor corriendo en ${PORT}`
+);
+
+connectDB();
+
+}
+
+);
+
+// CONECTAR BD DESPUES
+async function connectDB(){
 
 try{
 
@@ -26,30 +46,13 @@ console.log(
 "Tablas listas"
 );
 
-const PORT =
-process.env.PORT
-||
-3001;
-
-app.listen(
-
-PORT,
-
-()=>{
-
-console.log(
-
-`Servidor activo ${PORT}`
-
-);
-
-}
-
-);
-
 }
 
 catch(error){
+
+console.log(
+"Error BD:"
+);
 
 console.log(
 error
@@ -58,5 +61,3 @@ error
 }
 
 }
-
-start();
