@@ -115,15 +115,15 @@ export default function Home() {
               }}
             >
               <div>
-                <p style={{ fontWeight: "bold", textDecoration: tarea.completada ? "line-through" : "none" }}>
+                <p style={{ fontWeight: "bold", textDecoration: tarea.completada ? "line-through" : "none", color: "#111" }}>
                   {tarea.titulo}
                 </p>
-                {tarea.descripcion && <p style={{ color: "#666", fontSize: "14px" }}>{tarea.descripcion}</p>}
+                {tarea.descripcion && <p style={{ color: "#555", fontSize: "14px" }}>{tarea.descripcion}</p>}
               </div>
               <div style={{ display: "flex", gap: "8px" }}>
                 <button
                   onClick={() => toggleCompletada(tarea)}
-                  style={{ padding: "6px 12px", borderRadius: "6px", border: "1px solid #ccc", cursor: "pointer" }}
+                  style={{ padding: "6px 12px", borderRadius: "6px", border: "1px solid #ccc", cursor: "pointer", color: "#111", background: "#fff" }}
                 >
                   {tarea.completada ? "Desmarcar" : "Completar"}
                 </button>
